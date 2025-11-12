@@ -10,6 +10,8 @@ const prezzoKm = 0.21
 let costoBiglietto = null;
 
 
+
+
 document.getElementById("button").addEventListener("click", function () {
 
 let inputKm = document.getElementById("km").value;
@@ -25,6 +27,8 @@ let surname = document.getElementById("surname").value;
 console.log("Cognome ", surname);
 
 
+
+document.getElementById("trip").innerText = `${inputKm}${inputEtaPasseggero}`;
 
 if (inputEtaPasseggero < 18) {
     costoBiglietto = ((inputKm * prezzoKm) * (100 - 20) / 100);
