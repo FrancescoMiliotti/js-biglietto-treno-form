@@ -6,19 +6,40 @@
 // })
 
 
+const prezzoKm = 0.21
+let costoBiglietto = null;
+
+
 document.getElementById("button").addEventListener("click", function () {
 let inputKm = document.getElementById("km").value;
 console.log("km da percorrere ", inputKm);
 let inputEtaPasseggero = document.getElementById("eta").value;
 console.log("Età passeggero ", inputEtaPasseggero);
 
+
+
+if (inputEtaPasseggero < 18) {
+    costoBiglietto = ((inputKm * prezzoKm) * (100 - 20) / 100);
+    
+
+} else if (inputEtaPasseggero > 65) {
+    costoBiglietto = ((inputKm* prezzoKm) * (100 - 40) / 100);
+
+} else {
+    costoBiglietto = inputKm* prezzoKm;
+}
+
+console.log("Costo Biglietto", costoBiglietto.toFixed(2));
+document.getElementById("prezzoFinale").innerText = costoBiglietto.toFixed(2);
+
+
 });
 
 
-const prezzoKm = 0.21
-let inputKm = null;
-let inputEtaPasseggero = null;
-let costoBiglietto = null;
+
+//let inputKm = null;
+//let inputEtaPasseggero = null;
+
 
 
 
