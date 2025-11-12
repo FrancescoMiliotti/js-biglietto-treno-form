@@ -10,3 +10,15 @@ body {
     font-family: sans-serif;
     padding: 1rem;
 }
+
+.form-control{
+    margin-top: 2px;
+}
+
+button{
+    margin-top: 8px;
+}
+
+img{
+    margin: 8px;
+}

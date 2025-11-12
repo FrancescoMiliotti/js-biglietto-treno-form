@@ -11,10 +11,18 @@ let costoBiglietto = null;
 
 
 document.getElementById("button").addEventListener("click", function () {
+
 let inputKm = document.getElementById("km").value;
 console.log("km da percorrere ", inputKm);
+
 let inputEtaPasseggero = document.getElementById("eta").value;
 console.log("Età passeggero ", inputEtaPasseggero);
+
+let name = document.getElementById("name").value;
+console.log("Nome ", name);
+
+let surname = document.getElementById("surname").value;
+console.log("Cognome ", surname);
 
 
 
