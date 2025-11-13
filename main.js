@@ -6,8 +6,10 @@
 // })
 
 
-const prezzoKm = 0.21
+const prezzoKm = 0.21;
 let costoBiglietto = null;
+let offerta = null;
+
 
 
 
@@ -28,22 +30,24 @@ console.log("Cognome ", surname);
 
 
 
-document.getElementById("trip").innerText = `${inputKm}${inputEtaPasseggero}`;
-
 if (inputEtaPasseggero < 18) {
     costoBiglietto = ((inputKm * prezzoKm) * (100 - 20) / 100);
+    offerta = "Under 18"
     
 
 } else if (inputEtaPasseggero > 65) {
     costoBiglietto = ((inputKm* prezzoKm) * (100 - 40) / 100);
+    offerta = "Over 65"
 
 } else {
     costoBiglietto = inputKm* prezzoKm;
+    offerta = "Standard"
 }
 
 console.log("Costo Biglietto", costoBiglietto.toFixed(2));
-document.getElementById("prezzoFinale").innerText = costoBiglietto.toFixed(2);
-
+document.getElementById("prezzoFinale").innerText = `Costo Biglietto € : ${costoBiglietto.toFixed(2)}`;
+document.getElementById("trip").innerText = `Distanza Km ${inputKm} - Offerta : ${offerta}`;
+document.getElementById("utente").innerText = `Passeggero : ${name}  ${surname}`;
 
 });
 
